@@ -4,7 +4,6 @@ import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 
 function App() {
-
   const [amount, setAmount] = useState(0)
   const [from, setFrom] = useState("USD")
   const [to, setTo] = useState("INR")
@@ -24,7 +23,7 @@ function App() {
   const convert = () => {
     setConvertedAmount(amount * currencyInfo[to])
   }
-
+  
   return (
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
@@ -38,7 +37,6 @@ function App() {
                     onSubmit={(e) => {
                         e.preventDefault();
                         convert()
-                       
                     }}
                 >
                     <div className="w-full mb-1">
